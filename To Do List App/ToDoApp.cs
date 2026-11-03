@@ -4,12 +4,13 @@ using Microsoft.Xna.Framework.Input;
 
 namespace To_Do_List_App
 {
-    public class Game1 : Game
+    public class ToDoApp : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        ListOfTasks taskList;
 
-        public Game1()
+        public ToDoApp()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -19,7 +20,10 @@ namespace To_Do_List_App
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            // Testing 1 2 3
+
+            taskList = new ListOfTasks();
+
+            //TODO: Once saving is added load saved list here
 
             base.Initialize();
         }
